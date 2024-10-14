@@ -1,4 +1,4 @@
-import 'package:ecommerce/core/theme/colors.dart';
+import 'package:ecommerce/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
 class AppTextFormField extends StatelessWidget {
@@ -10,6 +10,8 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
+
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
@@ -26,6 +28,7 @@ class AppTextFormField extends StatelessWidget {
     this.backgroundColor,
     this.controller,
     required this.validator,
+    this.prefixIcon,
   });
 
   @override
@@ -35,45 +38,46 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
-            const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                color: ColorsManager.mainBlue,
+                color: Colors.white,
                 width: 1.3,
               ),
-              borderRadius: BorderRadius.circular(16.0),
+              borderRadius: BorderRadius.circular(12.0),
             ),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
-                //color: ColorsManager.lighterGray,
+                color: Colors.white,
                 width: 1.3,
               ),
-              borderRadius: BorderRadius.circular(16.0),
+              borderRadius: BorderRadius.circular(12.0),
             ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
             width: 1.3,
           ),
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
             width: 1.3,
           ),
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
-        //hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
+        hintStyle: hintStyle,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        //fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+        prefixIcon: prefixIcon,
+        fillColor: backgroundColor ?? Colors.white,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      //style: TextStyles.font14DarkBlueMedium,
+      style: TextStyles.font14DarkBlueMedium,
       validator: (value) {
         return validator(value);
       },

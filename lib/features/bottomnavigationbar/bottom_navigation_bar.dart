@@ -1,3 +1,8 @@
+import 'package:ecommerce/core/theme/colors.dart';
+import 'package:ecommerce/core/theme/styles.dart';
+import 'package:ecommerce/core/widgets/stylish_app_bar.dart';
+import 'package:ecommerce/core/widgets/text_form_field.dart';
+import 'package:ecommerce/features/home/presentation/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
@@ -27,7 +32,29 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedIndex],
+      appBar: const StylishAppBar(),
+      body: Column(
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.9,
+            child: AppTextFormField(
+              hintText: "mina",
+              prefixIcon: const Icon(Icons.search, color: ColorsManager.gray),
+              suffixIcon: const Icon(Icons.mic, color: ColorsManager.gray),
+              hintStyle: TextStyles.font15grayRegular,
+              validator: (p0) {},
+              backgroundColor: Colors.white,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Expanded(child: _pages[_selectedIndex]),
+        ],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
@@ -71,17 +98,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Home Page', style: TextStyle(fontSize: 24)),
-    );
-  }
-}
-
+// Pages
+//while adding a new page, remove this pages and add the new pages
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
