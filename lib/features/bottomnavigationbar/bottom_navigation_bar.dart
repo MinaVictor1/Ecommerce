@@ -41,7 +41,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.9,
             child: AppTextFormField(
-              hintText: "mina",
+              hintText: "search",
               prefixIcon: const Icon(Icons.search, color: ColorsManager.gray),
               suffixIcon: const Icon(Icons.mic, color: ColorsManager.gray),
               hintStyle: TextStyles.font15grayRegular,
