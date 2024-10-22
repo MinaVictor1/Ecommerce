@@ -1,8 +1,11 @@
+import 'package:ecommerce/core/routing/app_router.dart';
+import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/onboarding/widget/custom_indicator.dart';
 import 'package:ecommerce/features/onboarding/widget/first_page.dart';
 import 'package:ecommerce/features/onboarding/widget/secound_page.dart';
 import 'package:ecommerce/features/onboarding/widget/third_page.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -12,7 +15,7 @@ class Onboarding extends StatefulWidget {
 }
 
 class _OnboardingState extends State<Onboarding> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   int index = 0;
   @override
   Widget build(BuildContext context) {
@@ -28,12 +31,15 @@ class _OnboardingState extends State<Onboarding> {
                 children: [
                   Text(
                     '${index + 1}/3',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 20,
                     ),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(Routes.kSignUp);
+                    },
                     child: const Text(
                       'Skip',
                       style: TextStyle(color: Colors.black, fontSize: 20),
@@ -80,26 +86,31 @@ class _OnboardingState extends State<Onboarding> {
                         onTap: () {
                           _controller.animateToPage(
                             index - 1,
-                            duration: Duration(milliseconds: 250),
+                            duration: const Duration(milliseconds: 250),
                             curve: Curves.linear,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'prev',
                           style: TextStyle(color: Colors.black, fontSize: 20),
                         ),
                       ),
                       GestureDetector(
                         onTap: () {
-                          _controller.animateToPage(
-                            index + 1,
-                            duration: Duration(milliseconds: 250),
-                            curve: Curves.linear,
-                          );
+                          if (index == 2) {
+                            GoRouter.of(context).push(Routes.kSignUp);
+                          } else {
+                            _controller.animateToPage(
+                              index + 1,
+                              duration: const Duration(milliseconds: 250),
+                              curve: Curves.linear,
+                            );
+                          }
                         },
                         child: Text(
-                          'next',
-                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          index == 2 ? 'Get Started' : 'Next',
+                          style: const TextStyle(
+                              color: Colors.black, fontSize: 20),
                         ),
                       ),
                     ],

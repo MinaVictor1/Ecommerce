@@ -1,6 +1,8 @@
 import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/bottomnavigationbar/bottom_navigation_bar.dart';
+import 'package:ecommerce/features/onboarding/onboard_page.dart';
 import 'package:ecommerce/features/shop/presentation/screens/shop.dart';
+import 'package:ecommerce/features/sign_up/presentation/screens/sign_up.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class Approute {
@@ -9,13 +11,20 @@ abstract class Approute {
       //initial route
       GoRoute(
         path: '/',
-        builder: (context, state) => const BottomNavigationBarScreen(),
+        builder: (context, state) => const Onboarding(),
       ),
 
-      // navigate to home page
+      GoRoute(
+        path: Routes.kButtomNavigationBar,
+        builder: (context, state) => const BottomNavigationBarScreen(),
+      ),
       GoRoute(
         path: Routes.kShopPage,
         builder: (context, state) => const ShopScreen(),
+      ),
+      GoRoute(
+        path: Routes.kSignUp,
+        builder: (context, state) => const SignUp(),
       ),
     ],
   );
