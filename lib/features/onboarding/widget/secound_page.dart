@@ -9,11 +9,10 @@ class SecoundPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/logo/Sales consulting-pana 1.png'),
+        Image.asset('assets/logo/onboarding2.png'),
         Text('Make Payment',
-            textAlign: TextAlign.center,
-            style: TextStyles.font24BlackBold),
-        SizedBox(
+            textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
+        const SizedBox(
           height: 13,
         ),
         Center(

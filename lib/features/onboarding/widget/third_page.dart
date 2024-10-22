@@ -1,4 +1,3 @@
-import 'package:ecommerce/core/theme/font_weight.dart';
 import 'package:ecommerce/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +8,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/logo/Shopping bag-rafiki 1.png'),
+        Image.asset('assets/logo/onboarding3.png'),
         Text('Get Your Order',
             textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(
