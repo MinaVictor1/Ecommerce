@@ -9,6 +9,7 @@ class ColorsManager {
   static const Color pink = Color(0xFFFA7189);
   static const Color lighterpink = Color(0xFFFFCCD5);
   static const Color red = Color(0xFFF83758);
+  static const Color purple = Color(0xFF21003D);
 
   static const Color lighterBlack = Color(0xFF676767);
 }

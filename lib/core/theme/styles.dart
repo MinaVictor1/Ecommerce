@@ -83,6 +83,20 @@ class TextStyles {
     fontSize: 14,
     fontWeight: FontWeightHelper.semiBold,
   );
-  
- 
+
+  static TextStyle font13PurpleRegular = const TextStyle(
+    fontSize: 13.0,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.purple,
+  );
+  static TextStyle font20BlackBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+  static TextStyle font20WhiteBold = const TextStyle(
+    fontSize: 20.0,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
 }

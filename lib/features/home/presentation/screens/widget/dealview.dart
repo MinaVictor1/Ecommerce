@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/theme/styles.dart';
-import 'package:ecommerce/features/home/presentation/screens/widget/bottom.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/home_botton.dart';
 import 'package:flutter/material.dart';
 
 class DealView extends StatelessWidget {
@@ -39,7 +39,7 @@ class DealView extends StatelessWidget {
                   icon,
                   color: Colors.white,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(
@@ -52,9 +52,9 @@ class DealView extends StatelessWidget {
               ],
             ),
           ),
-          trailing: Container(
-            width: MediaQuery.of(context).size.width * 0.21,
-            child: Button(
+          trailing: const SizedBox(
+            // width: MediaQuery.of(context).size.width * 0.21,
+            child: HomeButton(
               text: 'View all',
               color: Colors.transparent,
               textColor: Colors.white,

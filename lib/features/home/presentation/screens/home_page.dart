@@ -1,8 +1,11 @@
-import 'package:ecommerce/core/theme/styles.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/all_featured.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/categories.dart';
 import 'package:ecommerce/features/home/presentation/screens/widget/dealview.dart';
 import 'package:ecommerce/features/home/presentation/screens/widget/flat_heels.dart';
-import 'package:ecommerce/features/home/presentation/screens/widget/bottom.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/new_arrivals.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/offer_widget.dart';
 import 'package:ecommerce/features/home/presentation/screens/widget/special_offers.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/sponser.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,12 +16,16 @@ class HomePage extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
+          AllFeatured(),
+          Categories(),
+          OfferWidget(),
           DealView(
             icon: Icons.timer,
             suptitle: '22h 55m 20s remaining',
             title: 'Deal of the Day',
             color: Color(0xff4392F9),
           ),
+          //karol
           SpecialOffers(),
           FlatHeels(),
           DealView(
@@ -27,6 +34,9 @@ class HomePage extends StatelessWidget {
             title: 'Trending Products ',
             color: Color(0xffFD6E87),
           ),
+          //karol
+          NewArrivals(),
+          Sponser(),
         ],
       ),
     );

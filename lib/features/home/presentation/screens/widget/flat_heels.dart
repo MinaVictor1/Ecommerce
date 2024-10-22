@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/theme/styles.dart';
-import 'package:ecommerce/features/home/presentation/screens/widget/bottom.dart';
+import 'package:ecommerce/features/home/presentation/screens/widget/home_botton.dart';
 import 'package:flutter/material.dart';
 
 class FlatHeels extends StatelessWidget {
@@ -12,16 +12,16 @@ class FlatHeels extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: 190,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xffE7E7EB),
         ),
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Image.asset('assets/images/FlatHeels.png'),
-            SizedBox(
+            const SizedBox(
               width: 40,
             ),
             Column(
@@ -33,16 +33,16 @@ class FlatHeels extends StatelessWidget {
                     style: TextStyles.font24BlackSemiBold,
                   ),
                 ),
-                Text(
+                const Text(
                   'Stand a chance to get rewarded',
                   style: TextStyle(
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 7,
                 ),
-                Button(
+                const HomeButton(
                   text: 'Visit Now',
                   icon: Icons.arrow_forward,
                   color: Color(0xffF83758),

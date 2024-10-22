@@ -1,14 +1,14 @@
 import 'package:ecommerce/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class HomeButton extends StatelessWidget {
   final String text;
   final IconData icon;
   final Color? color;
   final Color? textColor;
   final double? space;
 
-  const Button({
+  const HomeButton({
     super.key,
     required this.text,
     required this.icon,
