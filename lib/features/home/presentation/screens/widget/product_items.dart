@@ -2,7 +2,6 @@ import 'package:ecommerce/features/home/presentation/screens/widget/details_cont
 import 'package:ecommerce/features/home/presentation/screens/widget/image_container.dart';
 import 'package:flutter/material.dart';
 
-
 class ProductItems extends StatelessWidget {
   const ProductItems({super.key});
 

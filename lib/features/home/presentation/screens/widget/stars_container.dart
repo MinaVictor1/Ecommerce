@@ -2,7 +2,6 @@ import 'package:ecommerce/features/home/presentation/screens/widget/star_icon.da
 import 'package:ecommerce/features/home/presentation/screens/widget/text_object.dart';
 import 'package:flutter/material.dart';
 
-
 class StarsContainer extends StatelessWidget {
   const StarsContainer({super.key, required this.flag});
   final bool flag;
@@ -17,7 +16,7 @@ class StarsContainer extends StatelessWidget {
               StarIcon(flag: true),
               StarIcon(flag: false),
               SizedBox(
-                width: 5,
+                width: 2,
               ),
               TextObject(
                 text: '344567',

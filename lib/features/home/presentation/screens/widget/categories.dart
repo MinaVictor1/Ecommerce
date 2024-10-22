@@ -14,20 +14,22 @@ class Categories extends StatelessWidget {
       {'name': 'Womens', 'image': 'assets/images/womens.png'},
       {'name': 'Gifts', 'image': 'assets/images/gifts.png'},
     ];
-    return SizedBox(
-      height: 120,
-      child: ListView.builder(
-        itemCount: categories.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(right: 10.0),
-            child: CategoriesItem(
-              image: categories[index]['image']!,
-              title: categories[index]['name']!,
-            ),
-          );
-        },
+    return Center(
+      child: SizedBox(
+        height: 120,
+        child: ListView.builder(
+          itemCount: categories.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: CategoriesItem(
+                image: categories[index]['image']!,
+                title: categories[index]['name']!,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
