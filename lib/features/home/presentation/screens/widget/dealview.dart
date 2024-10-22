@@ -15,51 +15,40 @@ class DealView extends StatelessWidget {
   final IconData icon;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        height: 80,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(8),
+    return Container(
+      height: 80,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: ListTile(
+        title: Text(
+          title,
+          style: TextStyles.font20WhiteMedium,
         ),
-        child: ListTile(
-          title: Text(
-            title,
-            style: TextStyles.font20WhiteMedium,
-          ),
-          subtitle: Padding(
-            padding: const EdgeInsets.only(
-              top: 8,
+        subtitle: Row(
+          children: [
+            Icon(
+              icon,
+              color: Colors.white,
             ),
-            child: Row(
-              children: [
-                Icon(
-                  icon,
-                  color: Colors.white,
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                Text(
-                  suptitle,
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(.6),
-                    fontSize: 16,
-                  ),
-                ),
-              ],
+            Text(
+              suptitle,
+              style: TextStyle(
+                color: Colors.white.withOpacity(.6),
+                fontSize: 16,
+              ),
             ),
-          ),
-          trailing: const SizedBox(
-            // width: MediaQuery.of(context).size.width * 0.21,
-            child: HomeButton(
-              text: 'View all',
-              color: Colors.transparent,
-              textColor: Colors.white,
-              icon: Icons.arrow_forward,
-            ),
+          ],
+        ),
+        trailing: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.29,
+          child: const HomeButton(
+            text: 'View all',
+            color: Colors.transparent,
+            textColor: Colors.white,
+            icon: Icons.arrow_forward,
           ),
         ),
       ),

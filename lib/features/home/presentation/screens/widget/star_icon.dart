@@ -8,7 +8,7 @@ class StarIcon extends StatelessWidget {
     return Icon(
       flag ? Icons.star : Icons.star_half,
       color: flag ? Colors.yellow : Colors.grey,
-      size: 30,
+      size: 20,
     );
   }
 }

@@ -14,38 +14,40 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          const AllFeatured(),
-          const Categories(),
-          const OfferWidget(),
-          // const DealView(
-          //   icon: Icons.timer,
-          //   suptitle: '22h 55m 20s remaining',
-          //   title: 'Deal of the Day',
-          //   color: Color(0xff4392F9),
-          // ),
-          //karol
-          SizedBox(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.46,
-              child: const ListViewProducts()),
-          const SpecialOffers(),
-          const FlatHeels(),
-          // const DealView(
-          //   icon: Icons.date_range_outlined,
-          //   suptitle: 'Last Date 29/02/22',
-          //   title: 'Trending Products ',
-          //   color: Color(0xffFD6E87),
-          // ),
-          // karol
-          SizedBox(
-              height: MediaQuery.of(context).size.height * 0.46,
-              child: const ListViewProducts()),
-          const NewArrivals(),
-          const Sponser(),
-        ],
+    return const SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            AllFeatured(),
+            Categories(),
+            OfferWidget(),
+            DealView(
+              icon: Icons.timer,
+              suptitle: '22h 55m 20s remaining',
+              title: 'Deal of the Day',
+              color: Color(0xff4392F9),
+            ),
+            SizedBox(height: 20),
+            ListViewProducts(),
+            SizedBox(height: 20),
+            SpecialOffers(),
+            SizedBox(height: 20),
+            FlatHeels(),
+            SizedBox(height: 20),
+            DealView(
+              icon: Icons.date_range_outlined,
+              suptitle: 'Last Date 29/02/22',
+              title: 'Trending Products ',
+              color: Color(0xffFD6E87),
+            ),
+            SizedBox(height: 20),
+            ListViewProducts(),
+            NewArrivals(),
+            Sponser(),
+            SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }

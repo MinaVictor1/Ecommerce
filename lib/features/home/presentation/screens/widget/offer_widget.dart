@@ -36,7 +36,7 @@ class _OfferWidgetState extends State<OfferWidget> {
       children: [
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.25,
-          width: MediaQuery.of(context).size.width,
+          width: double.infinity,
           child: PageView.builder(
             controller: _pageController,
             itemCount: offers.length,
@@ -47,10 +47,13 @@ class _OfferWidgetState extends State<OfferWidget> {
             },
             itemBuilder: (context, index) {
               return Stack(children: [
-                Image.asset(
-                  offers[index],
-                  width: MediaQuery.of(context).size.width * 0.93,
-                  fit: BoxFit.contain,
+                Padding(
+                  padding: const EdgeInsets.only(right: 5),
+                  child: Image.asset(
+                    offers[index],
+                    width: MediaQuery.of(context).size.width * 0.95,
+                    fit: BoxFit.fill,
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10),

@@ -19,6 +19,9 @@ class Sponser extends StatelessWidget {
           style: TextStyles.font20BlackSemiBold
               .copyWith(fontWeight: FontWeightHelper.regular),
         ),
+        const SizedBox(
+          height: 10,
+        ),
         Image.asset("assets/images/sponser.png"),
         HomeButton(
           text: "up to 50% Off",
