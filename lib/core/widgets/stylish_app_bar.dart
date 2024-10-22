@@ -10,7 +10,7 @@ class StylishAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       leading: IconButton(
         icon: const CircleAvatar(
-          backgroundImage: AssetImage('assets/logo/listlogo.png'),
+          backgroundImage: AssetImage('assets/images/listlogo.png'),
         ),
         onPressed: () {},
       ),
@@ -18,7 +18,7 @@ class StylishAppBar extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/logo/appbarlogo.png',
+            'assets/images/appbarlogo.png',
             height: 30,
           ),
           const SizedBox(width: 8),
@@ -35,7 +35,7 @@ class StylishAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: const CircleAvatar(
-            backgroundImage: AssetImage('assets/logo/userlogo.png'),
+            backgroundImage: AssetImage('assets/images/userlogo.png'),
           ),
           onPressed: () {},
         ),

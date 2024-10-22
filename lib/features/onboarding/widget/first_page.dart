@@ -10,8 +10,7 @@ class FirstPage extends StatelessWidget {
       children: [
         Image.asset('assets/logo/fashion shop-rafiki 1.png'),
         Text('Choose Products',
-            textAlign: TextAlign.center,
-            style: TextStyles.font20BlackSemiBold),
+            textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(
           height: 13,
         ),
@@ -19,7 +18,7 @@ class FirstPage extends StatelessWidget {
           child: Text(
             'Amet minim mollit non deserunt ullamco est \n sit aliqua dolor do amet sint. Velit officia \n consequat duis enim velit mollit.',
             textAlign: TextAlign.center,
-            style: TextStyles.font20BlackSemiBold,
+            style: TextStyles.font15grayRegular,
           ),
         ),
       ],

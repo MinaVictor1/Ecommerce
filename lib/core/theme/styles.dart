@@ -38,6 +38,11 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: Colors.black,
   );
+  static TextStyle font24BlackSemiBold = const TextStyle(
+    fontSize: 24.0,
+    fontWeight: FontWeightHelper.semiBold,
+    color: Colors.black,
+  );
   static TextStyle font14BlackRegular = const TextStyle(
     fontSize: 14.0,
     fontWeight: FontWeightHelper.regular,
@@ -68,5 +73,30 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: Colors.grey,
   );
+  static TextStyle font20WhiteMedium = const TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    fontWeight: FontWeightHelper.medium,
+  );
+  static TextStyle font14WhiteSemiBold = const TextStyle(
+    color: Colors.white,
+    fontSize: 14,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+
+  static TextStyle font13PurpleRegular = const TextStyle(
+    fontSize: 13.0,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.purple,
+  );
+  static TextStyle font20BlackBold = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: Colors.black,
+  );
+  static TextStyle font20WhiteBold = const TextStyle(
+    fontSize: 20.0,
+    fontWeight: FontWeightHelper.bold,
+    color: Colors.white,
+  );
 }
-//font14DarkBlueMedium

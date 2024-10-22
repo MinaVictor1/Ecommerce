@@ -11,8 +11,7 @@ class ThirdPage extends StatelessWidget {
       children: [
         Image.asset('assets/logo/Shopping bag-rafiki 1.png'),
         Text('Get Your Order',
-            textAlign: TextAlign.center,
-            style: TextStyles.font20BlackSemiBold),
+            textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(
           height: 13,
         ),
@@ -20,7 +19,7 @@ class ThirdPage extends StatelessWidget {
           child: Text(
             'Amet minim mollit non deserunt ullamco est \n sit aliqua dolor do amet sint. Velit officia \n consequat duis enim velit mollit.',
             textAlign: TextAlign.center,
-            style: TextStyles.font20BlackSemiBold,
+            style: TextStyles.font15grayRegular,
           ),
         ),
       ],

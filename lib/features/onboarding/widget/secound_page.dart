@@ -12,7 +12,7 @@ class SecoundPage extends StatelessWidget {
         Image.asset('assets/logo/Sales consulting-pana 1.png'),
         Text('Make Payment',
             textAlign: TextAlign.center,
-            style: TextStyles.font15grayRegular),
+            style: TextStyles.font24BlackBold),
         SizedBox(
           height: 13,
         ),
