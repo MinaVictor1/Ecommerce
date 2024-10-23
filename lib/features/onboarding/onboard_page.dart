@@ -1,4 +1,3 @@
-import 'package:ecommerce/core/routing/app_router.dart';
 import 'package:ecommerce/core/routing/routes.dart';
 import 'package:ecommerce/features/onboarding/widget/custom_indicator.dart';
 import 'package:ecommerce/features/onboarding/widget/first_page.dart';

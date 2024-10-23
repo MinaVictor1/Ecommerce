@@ -8,7 +8,10 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/logo/onboarding1.png'),
+        Image.asset(
+          'assets/logo/onboarding1.png',
+          width: MediaQuery.of(context).size.width * .7,
+        ),
         Text('Choose Products',
             textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(

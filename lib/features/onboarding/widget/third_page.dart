@@ -8,7 +8,10 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/logo/onboarding3.png'),
+        Image.asset(
+          'assets/logo/onboarding3.png',
+          width: MediaQuery.of(context).size.width * .7,
+        ),
         Text('Get Your Order',
             textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(

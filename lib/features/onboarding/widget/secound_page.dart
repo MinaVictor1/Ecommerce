@@ -1,4 +1,3 @@
-import 'package:ecommerce/core/theme/font_weight.dart';
 import 'package:ecommerce/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +8,9 @@ class SecoundPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset('assets/logo/onboarding2.png'),
+        Image.asset(
+          'assets/logo/onboarding2.png',
+        ),
         Text('Make Payment',
             textAlign: TextAlign.center, style: TextStyles.font24BlackBold),
         const SizedBox(
