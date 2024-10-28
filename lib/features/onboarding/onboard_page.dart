@@ -37,7 +37,7 @@ class _OnboardingState extends State<Onboarding> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      GoRouter.of(context).push(Routes.kSignUp);
+                      GoRouter.of(context).push(Routes.kSignIn);
                     },
                     child: const Text(
                       'Skip',
@@ -97,7 +97,7 @@ class _OnboardingState extends State<Onboarding> {
                       GestureDetector(
                         onTap: () {
                           if (index == 2) {
-                            GoRouter.of(context).push(Routes.kSignUp);
+                            GoRouter.of(context).push(Routes.kSignIn);
                           } else {
                             _controller.animateToPage(
                               index + 1,
