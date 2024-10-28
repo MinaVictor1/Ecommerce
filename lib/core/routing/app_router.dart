@@ -3,6 +3,7 @@ import 'package:ecommerce/features/bottomnavigationbar/bottom_navigation_bar.dar
 import 'package:ecommerce/features/onboarding/onboard_page.dart';
 import 'package:ecommerce/features/shop/presentation/screens/shop.dart';
 import 'package:ecommerce/features/sign_up/presentation/screens/sign_up.dart';
+import 'package:ecommerce/features/signin/singnin_page.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class Approute {
@@ -25,6 +26,11 @@ abstract class Approute {
       GoRoute(
         path: Routes.kSignUp,
         builder: (context, state) => const SignUp(),
+      ),
+
+      GoRoute(
+        path: Routes.kSignIn,
+        builder: (context, state) => const SingninPage(),
       ),
     ],
   );
