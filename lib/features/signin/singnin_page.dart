@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/routing/routes.dart';
-import '../../core/theme/colors.dart';
 import '../../core/theme/styles.dart';
 
 class SingninPage extends StatefulWidget {
