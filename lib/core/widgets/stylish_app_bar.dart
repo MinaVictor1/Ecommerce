@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../routing/routes.dart';
 
 class StylishAppBar extends StatelessWidget implements PreferredSizeWidget {
   const StylishAppBar({super.key});
@@ -37,7 +40,9 @@ class StylishAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const CircleAvatar(
             backgroundImage: AssetImage('assets/images/userlogo.png'),
           ),
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(Routes.kProfile);
+          },
         ),
       ],
     );

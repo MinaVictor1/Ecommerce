@@ -6,6 +6,8 @@ import 'package:ecommerce/features/sign_up/presentation/screens/sign_up.dart';
 import 'package:ecommerce/features/signin/singnin_page.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/Profile/Profile_page.dart';
+
 abstract class Approute {
   static final router = GoRouter(
     routes: [
@@ -31,6 +33,10 @@ abstract class Approute {
       GoRoute(
         path: Routes.kSignIn,
         builder: (context, state) => const SingninPage(),
+      ),
+      GoRoute(
+        path: Routes.kProfile,
+        builder: (context, state) => const peofilePage(),
       ),
     ],
   );

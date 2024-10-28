@@ -4,7 +4,9 @@ import 'package:ecommerce/features/Profile/widgets/Business_Address_Details.dart
 import 'package:ecommerce/features/Profile/widgets/Personal_Details.dart';
 import 'package:ecommerce/features/Profile/widgets/img_profile.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../core/routing/routes.dart';
 import '../../core/theme/colors.dart';
 import '../../core/widgets/app_text_button.dart';
 
@@ -46,8 +48,10 @@ class _peofilePageState extends State<peofilePage> {
                   backgroundColor: ColorsManager.red,
                   buttonHeight: 60,
                   buttonText: 'save',
-                  textStyle: TextStyle(color: Colors.white, fontSize: 25),
-                  onPressed: () {},
+                  textStyle: TextStyles.font20WhiteMedium,
+                  onPressed: () {
+                    GoRouter.of(context).push(Routes.kButtomNavigationBar);
+                  },
                 ),
                   
               ],

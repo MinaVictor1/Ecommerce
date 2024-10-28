@@ -2,7 +2,9 @@ import 'package:ecommerce/core/theme/colors.dart';
 import 'package:ecommerce/core/theme/styles.dart';
 import 'package:ecommerce/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../core/routing/routes.dart';
 import 'Circle_Button.dart';
 
 class SignUpButtons extends StatelessWidget {
@@ -18,8 +20,10 @@ class SignUpButtons extends StatelessWidget {
         backgroundColor: ColorsManager.red,
         buttonHeight: 60,
         buttonText: 'log in',
-        textStyle: TextStyle(color: Colors.white, fontSize: 25),
-        onPressed: () {},
+        textStyle: const TextStyle(color: Colors.white, fontSize: 25),
+        onPressed: () {
+          GoRouter.of(context).push(Routes.kButtomNavigationBar);
+        },
       ),
       const SizedBox(
         height: 15,

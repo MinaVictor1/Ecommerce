@@ -2,6 +2,7 @@ import 'package:ecommerce/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/app_text_button.dart';
+import '../../../core/theme/styles.dart';
 
 class ForgotButton extends StatelessWidget {
   final Function() onPressed;
@@ -17,8 +18,10 @@ class ForgotButton extends StatelessWidget {
           buttonWidth: 150,
           buttonText: 'Forgot Password?',
           backgroundColor: Colors.transparent,
-          textStyle: TextStyle(color: ColorsManager.red),
-          onPressed: () {},
+          textStyle: TextStyles.font15PinkSemiBold,
+          onPressed: () {
+
+          },
         ),
       ],
     );

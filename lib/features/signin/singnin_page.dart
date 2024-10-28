@@ -1,10 +1,10 @@
-
 import 'package:ecommerce/features/signin/widgets/Forgot_text.dart';
 import 'package:ecommerce/features/signin/widgets/input_in.dart';
 import 'package:ecommerce/features/signin/widgets/login_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../core/theme/colors.dart';
+import '../../core/routing/routes.dart';
 import '../../core/theme/styles.dart';
 
 class SingninPage extends StatefulWidget {
@@ -26,7 +26,10 @@ class _SingninPageState extends State<SingninPage> {
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: 20,
-                vertical: MediaQuery.of(context).size.height * 0.07),
+                vertical: MediaQuery
+                    .of(context)
+                    .size
+                    .height * 0.07),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,21 +41,24 @@ class _SingninPageState extends State<SingninPage> {
                 ),
                 SignUpButtons(),
 
-            Center(
-              child: RichText(
-                text: TextSpan(
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'Create An Account  ',
-                        style: TextStyles.font16BlackSemiBold),
-                    TextSpan(
-                        text: 'Sign Up',
-                        style: TextStyles.font16BlackSemiBold
-                            .copyWith(color: ColorsManager.pink)),
-                  ],
-                ),
-              ),
-            )
+                Center(
+                  child: InkWell(
+                    onTap: () =>
+                        GoRouter.of(context).push(Routes.kSignUp),
+                    child: RichText(
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                              text: 'Create An Account  ',
+                              style: TextStyles.font16BlackSemiBold),
+                          TextSpan(
+                              text: 'Sign Up',
+                              style: TextStyles.font18redUnterLine),
+                        ],
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),

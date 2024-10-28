@@ -23,20 +23,20 @@ class _InputsSignInState extends State<InputsSignIn> {
         children: [
           AppTextFormField(
             backgroundColor: ColorsManager.offWhite,
-            prefixIcon: Icon(Icons.person_rounded ,
+            prefixIcon: const Icon(Icons.person_rounded ,
               color: ColorsManager.lighterBlack,),
             hintText: 'Username or Email',
             hintStyle: TextStyles.font15grayRegular,
             validator: (String) {},
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           AppTextFormField(
             hintText: " Password",
             hintStyle: TextStyles.font15grayRegular,
             isObscureText: isObscureTextPassword,
             validator: (p0) {},
             backgroundColor: ColorsManager.offWhite,
-            prefixIcon: const Icon(Icons.person,
+            prefixIcon: const Icon(Icons.lock,
               color: ColorsManager.lighterBlack,),
             suffixIcon: GestureDetector(
               onTap: () {

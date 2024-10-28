@@ -99,4 +99,14 @@ class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: Colors.white,
   );
+  static TextStyle font18redUnterLine = const TextStyle(
+    fontSize: 18.0,
+      color: ColorsManager.red,
+      fontWeight: FontWeightHelper.bold,
+      decoration: TextDecoration.underline,
+      decorationColor: ColorsManager.red,
+      decorationThickness: 2
+  );
+
+
 }

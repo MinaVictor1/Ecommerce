@@ -36,14 +36,10 @@ class PersonalData extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             AppTextButton(
-              buttonWidth: 150,
-              buttonText: 'Change Password',
+              buttonWidth: 180,
+              buttonText: 'Change password',
               backgroundColor: Colors.transparent,
-              textStyle: const TextStyle(
-                  color: ColorsManager.red,
-                  decoration: TextDecoration.underline,
-                  decorationColor: ColorsManager.red,
-                  decorationThickness: 2),
+              textStyle: TextStyles.font18redUnterLine,
               onPressed: () {},
             ),
           ],
