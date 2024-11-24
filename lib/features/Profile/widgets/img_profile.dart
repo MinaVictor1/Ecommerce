@@ -2,9 +2,11 @@ import 'package:ecommerce/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class imgProfile extends StatelessWidget {
+  const imgProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Stack(
         alignment: Alignment.bottomRight,
         children: [
@@ -16,7 +18,7 @@ class imgProfile extends StatelessWidget {
               backgroundImage: AssetImage('assets/profile_image.png'), // Replace with your image asset
             ),
           ),
-          const CircleAvatar(
+          CircleAvatar(
             radius: 16,
             backgroundColor: ColorsManager.red,
             child: Icon(

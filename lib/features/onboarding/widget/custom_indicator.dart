@@ -9,7 +9,7 @@ class CustomIndicator extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(4),
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
           color: active ? Colors.black : Colors.grey,

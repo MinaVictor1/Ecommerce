@@ -10,14 +10,14 @@ import '../../core/routing/routes.dart';
 import '../../core/theme/colors.dart';
 import '../../core/widgets/app_text_button.dart';
 
-class peofilePage extends StatefulWidget {
-  const peofilePage({super.key});
+class profilePage extends StatefulWidget {
+  const profilePage({super.key});
 
   @override
-  State<peofilePage> createState() => _peofilePageState();
+  State<profilePage> createState() => _profilePageState();
 }
 
-class _peofilePageState extends State<peofilePage> {
+class _profilePageState extends State<profilePage> {
   bool isObscureTextPassword = true;
 
   @override
@@ -25,7 +25,7 @@ class _peofilePageState extends State<peofilePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Checkout",style: TextStyles.font24BlackBold),
+        title: Text("Checkout", style: TextStyles.font24BlackBold),
         centerTitle: true,
       ),
       body: Container(
@@ -37,13 +37,12 @@ class _peofilePageState extends State<peofilePage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                imgProfile(),
-                PersonalData(),
-                const Divider(height:3,color: ColorsManager.lighterBlack),
-                BusinessAddressData(),
-                const Divider(height:3,color: ColorsManager.lighterBlack),
-                BankAccountData(),
-
+                const imgProfile(),
+                const PersonalData(),
+                const Divider(height: 3, color: ColorsManager.lighterBlack),
+                const BusinessAddressData(),
+                const Divider(height: 3, color: ColorsManager.lighterBlack),
+                const BankAccountData(),
                 AppTextButton(
                   backgroundColor: ColorsManager.red,
                   buttonHeight: 60,
@@ -53,7 +52,6 @@ class _peofilePageState extends State<peofilePage> {
                     GoRouter.of(context).push(Routes.kButtomNavigationBar);
                   },
                 ),
-                  
               ],
             ),
           ),

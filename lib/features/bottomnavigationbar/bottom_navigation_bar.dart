@@ -3,6 +3,7 @@ import 'package:ecommerce/core/theme/styles.dart';
 import 'package:ecommerce/core/widgets/stylish_app_bar.dart';
 import 'package:ecommerce/core/widgets/text_form_field.dart';
 import 'package:ecommerce/features/home/presentation/screens/home_page.dart';
+import 'package:ecommerce/features/trending_products/presentation/pages/trending.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   int _selectedIndex = 0;
   final List<Widget> _pages = [
     const HomePage(),
-    const FavoritesPage(),
+    const TrendingScreen(),
     const CartPage(),
     const SearchPage(),
     const ProfilePage(),
@@ -111,16 +112,16 @@ class SearchPage extends StatelessWidget {
   }
 }
 
-class FavoritesPage extends StatelessWidget {
-  const FavoritesPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Favorites Page', style: TextStyle(fontSize: 24)),
-    );
-  }
-}
+// class FavoritesPage extends StatelessWidget {
+//   const FavoritesPage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Center(
+//       child: Text('Favorites Page', style: TextStyle(fontSize: 24)),
+//     );
+//   }
+// }
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

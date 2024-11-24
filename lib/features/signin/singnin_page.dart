@@ -7,14 +7,14 @@ import 'package:go_router/go_router.dart';
 import '../../core/routing/routes.dart';
 import '../../core/theme/styles.dart';
 
-class SingninPage extends StatefulWidget {
-  const SingninPage({super.key});
+class SingInPage extends StatefulWidget {
+  const SingInPage({super.key});
 
   @override
-  State<SingninPage> createState() => _SingninPageState();
+  State<SingInPage> createState() => _SingInPageState();
 }
 
-class _SingninPageState extends State<SingninPage> {
+class _SingInPageState extends State<SingInPage> {
   bool isObscureTextPassword = true;
 
   @override
@@ -26,25 +26,20 @@ class _SingninPageState extends State<SingninPage> {
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: 20,
-                vertical: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.07),
+                vertical: MediaQuery.of(context).size.height * 0.07),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Welcome \nBack!", style: TextStyles.font36BlackBold),
-                SizedBox(height: 20),
-                InputsSignIn(),
+                const SizedBox(height: 20),
+                const InputsSignIn(),
                 ForgotButton(
                   onPressed: () {},
                 ),
-                SignUpButtons(),
-
+                const SignUpButtons(),
                 Center(
                   child: InkWell(
-                    onTap: () =>
-                        GoRouter.of(context).push(Routes.kSignUp),
+                    onTap: () => GoRouter.of(context).push(Routes.kSignUp),
                     child: RichText(
                       text: TextSpan(
                         children: <TextSpan>[
