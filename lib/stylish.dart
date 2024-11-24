@@ -9,9 +9,6 @@ class Stylish extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      // onGenerateRoute: onGenerateRoute(
-      //   RouteSettings(initialRoute: SplashView.routeName),
-      // ),
       title: "Doc App",
       theme: ThemeData(
         primarySwatch: Colors.blue,
