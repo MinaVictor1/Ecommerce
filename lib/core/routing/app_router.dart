@@ -1,14 +1,12 @@
 import 'package:ecommerce/core/routing/routes.dart';
-import 'package:ecommerce/features/GetStarted/presentation/screens/get_started.dart';
-import 'package:ecommerce/features/bottomnavigationbar/bottom_navigation_bar.dart';
-import 'package:ecommerce/features/onboarding/onboard_page.dart';
-import 'package:ecommerce/features/shop/presentation/screens/shop.dart';
-import 'package:ecommerce/features/sign_up/presentation/screens/sign_up.dart';
-import 'package:ecommerce/features/signin/singnin_page.dart';
-import 'package:ecommerce/features/trending_products/presentation/pages/trending.dart';
+import 'package:ecommerce/features/customer/presentation/GetStarted/presentation/screens/get_started.dart';
+import 'package:ecommerce/features/customer/presentation/bottomnavigationbar/bottom_navigation_bar.dart';
+import 'package:ecommerce/core/widgets/onboarding/onboard_page.dart';
+import 'package:ecommerce/features/customer/presentation/shop/presentation/shop.dart';
+import 'package:ecommerce/features/auth/presentation/sign_up/sign_up.dart';
+import 'package:ecommerce/features/auth/presentation/sign_in/sign_in.dart';
+import 'package:ecommerce/features/customer/presentation/trending_products/presentation/trending.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../features/Profile/Profile_page.dart';
 
 abstract class AppRoute {
   static final router = GoRouter(
@@ -16,7 +14,7 @@ abstract class AppRoute {
       //initial route
       GoRoute(
         path: '/',
-        builder: (context, state) => const GetStartedView(),
+        builder: (context, state) => const OnBoarding(),
       ),
 
       GoRoute(
@@ -34,11 +32,11 @@ abstract class AppRoute {
 
       GoRoute(
         path: Routes.kSignIn,
-        builder: (context, state) => const SingInPage(),
+        builder: (context, state) => const SignInScreen(),
       ),
       GoRoute(
         path: Routes.kProfile,
-        builder: (context, state) => const profilePage(),
+        builder: (context, state) => const ProfilePage(),
       ),
       GoRoute(
         path: Routes.kSplash,
@@ -50,14 +48,8 @@ abstract class AppRoute {
       ),
       GoRoute(
         path: Routes.kOnboarding,
-        builder: (context, state) => const Onboarding(),
+        builder: (context, state) => const OnBoarding(),
       ),
     ],
   );
 }
-// Route<dynamic> onGenerateRoute (RouteSettings settings){
-//   switch(settings.name){
-//
-//   }
-//
-// }
