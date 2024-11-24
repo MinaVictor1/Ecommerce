@@ -5,6 +5,8 @@ import '../../../core/theme/styles.dart';
 import '../../../core/widgets/text_form_field.dart';
 
 class BusinessAddressData extends StatelessWidget {
+  const BusinessAddressData({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

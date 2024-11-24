@@ -6,6 +6,8 @@ import '../../../core/widgets/app_text_button.dart';
 import '../../../core/widgets/text_form_field.dart';
 
 class PersonalData extends StatelessWidget {
+  const PersonalData({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
