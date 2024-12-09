@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/routing/routes.dart';
+import 'package:ecommerce/features/admin/presentation/home_admin/home_admin.dart';
 import 'package:ecommerce/features/customer/presentation/GetStarted/presentation/screens/get_started.dart';
 import 'package:ecommerce/features/customer/presentation/bottomnavigationbar/bottom_navigation_bar.dart';
 import 'package:ecommerce/core/widgets/onboarding/onboard_page.dart';
@@ -14,7 +15,7 @@ abstract class AppRoute {
       //initial route
       GoRoute(
         path: '/',
-        builder: (context, state) => const OnBoarding(),
+        builder: (context, state) => const HomeAdmin(),
       ),
 
       GoRoute(
