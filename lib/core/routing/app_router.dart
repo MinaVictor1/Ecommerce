@@ -1,4 +1,6 @@
+import 'package:ecommerce/core/di/dependency_injection.dart';
 import 'package:ecommerce/core/routing/routes.dart';
+import 'package:ecommerce/features/admin/logic/cubit/add_product_cubit.dart';
 import 'package:ecommerce/features/admin/presentation/home_admin/home_admin.dart';
 import 'package:ecommerce/features/customer/presentation/GetStarted/presentation/screens/get_started.dart';
 import 'package:ecommerce/features/customer/presentation/bottomnavigationbar/bottom_navigation_bar.dart';
@@ -7,6 +9,7 @@ import 'package:ecommerce/features/customer/presentation/shop/presentation/shop.
 import 'package:ecommerce/features/auth/presentation/sign_up/sign_up.dart';
 import 'package:ecommerce/features/auth/presentation/sign_in/sign_in.dart';
 import 'package:ecommerce/features/customer/presentation/trending_products/presentation/trending.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRoute {
@@ -15,7 +18,10 @@ abstract class AppRoute {
       //initial route
       GoRoute(
         path: '/',
-        builder: (context, state) => const HomeAdmin(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => getIt<AddProductCubit>(),
+          child: const HomeAdmin(),
+        ),
       ),
 
       GoRoute(

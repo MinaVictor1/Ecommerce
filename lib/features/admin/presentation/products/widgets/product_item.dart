@@ -33,7 +33,7 @@ class ProductItem extends StatelessWidget {
             const ProductItemBar(),
             CachedNetworkImage(
               imageUrl:
-                  'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FProductshop%2F&psig=AOvVaw0bfSuwUadQcAFLx5vCSnBN&ust=1732996575546000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCdwr6pgooDFQAAAAAdAAAAABAE',
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaYTaC-q-QWUu2g7QgVvRKkJkqXjXtjBU2w&s',
               placeholder: (context, url) => const CircularProgressIndicator(),
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
