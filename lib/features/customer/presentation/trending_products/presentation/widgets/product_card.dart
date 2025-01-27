@@ -1,9 +1,10 @@
+import 'package:ecommerce/features/admin/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
 
-  const ProductCard({Key? key, required this.product}) : super(key: key);
+  const ProductCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class ProductCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
             child: Image.asset(
-              product.image,
+              product.imageUrl,
               fit: BoxFit.cover,
               height: 150,
               width: double.infinity,
@@ -90,63 +91,77 @@ class ProductCard extends StatelessWidget {
   }
 }
 
-class Product {
-  final String name;
-  final String description;
-  final String image;
-  final double price;
-  final double rating;
-
-  Product({
-    required this.name,
-    required this.description,
-    required this.image,
-    required this.price,
-    required this.rating,
-  });
-}
-
 final List<Product> products = [
   Product(
+    id: "1",
     name: 'Black Winter Coat',
     description: 'Autumn And Winter Casual cotton padded jacket...',
-    image: 'assets/images/gifts.png',
-    price: 49.99,
-    rating: 4.8,
+    price: "49.99",
+    stock: true,
+    category: 'Clothing',
+    imageUrl: 'assets/images/gifts.png',
+    rating: "4.8",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
   Product(
+    id: "2",
     name: 'Mens Starry Shirt',
     description: 'Mens Starry Sky Printed Shirt 100% Cotton Fabric...',
-    image: 'assets/images/Sales consulting-pana 1.png',
-    price: 39.99,
-    rating: 4.7,
+    price: "39.99",
+    stock: true,
+    category: 'Clothing',
+    imageUrl: 'assets/images/Sales consulting-pana 1.png',
+    rating: "4.7",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
   Product(
-    name: 'Black Winter Coat',
-    description: 'Autumn And Winter Casual cotton padded jacket...',
-    image: 'assets/images/gifts.png',
-    price: 49.99,
-    rating: 4.8,
+    id: "3",
+    name: 'Women’s Summer Dress',
+    description: 'Light and breezy floral dress perfect for summer...',
+    price: "29.99",
+    stock: true,
+    category: 'Clothing',
+    imageUrl: 'assets/images/summer_dress.png',
+    rating: "4.6",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
   Product(
-    name: 'Black Winter Coat',
-    description: 'Autumn And Winter Casual cotton padded jacket...',
-    image: 'assets/images/gifts.png',
-    price: 49.99,
-    rating: 4.8,
+    id: "4",
+    name: 'Leather Handbag',
+    description: 'Stylish leather handbag for all occasions...',
+    price: "89.99",
+    stock: false,
+    category: 'Accessories',
+    imageUrl: 'assets/images/handbag.png',
+    rating: "4.9",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
   Product(
-    name: 'Black Winter Coat',
-    description: 'Autumn And Winter Casual cotton padded jacket...',
-    image: 'assets/images/gifts.png',
-    price: 49.99,
-    rating: 4.8,
+    id: "5",
+    name: 'Running Shoes',
+    description: 'Lightweight and comfortable running shoes...',
+    price: "59.99",
+    stock: true,
+    category: 'Footwear',
+    imageUrl: 'assets/images/running_shoes.png',
+    rating: "4.7",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
   Product(
-    name: 'Black Winter Coat',
-    description: 'Autumn And Winter Casual cotton padded jacket...',
-    image: 'assets/images/gifts.png',
-    price: 49.99,
-    rating: 4.8,
+    id: "6",
+    name: 'Wireless Earbuds',
+    description: 'High-quality sound with noise cancellation...',
+    price: "99.99",
+    stock: false,
+    category: 'Electronics',
+    imageUrl: 'assets/images/earbuds.png',
+    rating: "4.8",
+    createdAt: DateTime.now().toString(),
+    updatedAt: DateTime.now().toString(),
   ),
 ];

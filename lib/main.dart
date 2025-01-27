@@ -1,3 +1,4 @@
+import 'package:ecommerce/core/di/dependency_injection.dart';
 import 'package:ecommerce/core/server/init_server.dart';
 import 'package:ecommerce/core/utils/env_variables.dart';
 import 'package:ecommerce/stylish.dart';
@@ -10,5 +11,6 @@ void main() async {
   await SupabaseService().initialize();
 
   await ScreenUtil.ensureScreenSize();
+  setupGetIt();
   runApp(const Stylish());
 }
