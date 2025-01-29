@@ -15,25 +15,21 @@ class AppTextFormField extends StatelessWidget {
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
-
-  final Function(String)? onChanged; //   onChanged
-
-  const AppTextFormField(
-      {super.key,
-      this.contentPadding,
-      this.focusedBorder,
-      this.enabledBorder,
-      this.inputTextStyle,
-      this.hintStyle,
-      required this.hintText,
-      this.isObscureText,
-      this.suffixIcon,
-      this.backgroundColor,
-      this.controller,
-      required this.validator,
-      this.prefixIcon,
-      this.onChanged // ignore: avoid_positional_boolean_parameters,
-      });
+  const AppTextFormField({
+    super.key,
+    this.contentPadding,
+    this.focusedBorder,
+    this.enabledBorder,
+    this.inputTextStyle,
+    this.hintStyle,
+    required this.hintText,
+    this.isObscureText,
+    this.suffixIcon,
+    this.backgroundColor,
+    this.controller,
+    required this.validator,
+    this.prefixIcon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +81,6 @@ class AppTextFormField extends StatelessWidget {
       validator: (value) {
         return validator(value);
       },
-      onChanged: onChanged,
     );
   }
 }

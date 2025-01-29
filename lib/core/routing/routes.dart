@@ -7,8 +7,4 @@ class Routes {
   static const kSplash = '/Splash';
   static const kTrending = '/kTrending';
   static const kOnboarding = '/kOnboarding';
-  static const kGetStarted = '/kGetStarted';
-  static const kForgotPassword = '/kForgotPassword';
-  static const kSetting = '/kSetting';
-  static const kUsersScreen = '/kUsersScreen';
 }
